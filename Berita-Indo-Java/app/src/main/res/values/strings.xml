@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Berita Indo Java</string>
+    <string name="news_thumnail">news-thumnail</string>
 </resources>

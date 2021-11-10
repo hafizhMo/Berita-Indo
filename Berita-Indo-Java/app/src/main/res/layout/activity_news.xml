@@ -7,5 +7,9 @@
     tools:context=".ui.NewsActivity">
 
     <!--TO-DO 1: create RecyclerView and give the 'id'-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_news"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

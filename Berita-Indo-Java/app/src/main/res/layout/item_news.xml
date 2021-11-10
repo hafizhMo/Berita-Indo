@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
 
     <!--TO-DO 1: create 2 TextView for 'title' & 'pubDate',-->
     <!--don't forget give the 'id'-->
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@id/image_thumbnail"
+        android:minLines="2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:maxEms="3"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_pubdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintLeft_toLeftOf="@id/text_title"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <!--TO-DO 2: create ImageView for 'thumbnail' and give the 'id'-->
-
+    <ImageView
+        android:id="@+id/image_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@id/text_title"
+        app:layout_constraintBottom_toBottomOf="@id/text_pubdate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        android:contentDescription="@string/news_thumnail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
